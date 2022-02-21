@@ -1,0 +1,16 @@
+<!--Main Tool bar of the app-->
+<mat-toolbar color="primary">
+  <button mat-icon-button routerLink="gameMenu" routerLinkActive="active" *ngIf="this.isLoggedIn()">
+    <mat-icon>home</mat-icon>
+  </button>
+  <span>Connect 4</span>
+  <span class="spacer"></span>
+  <button mat-raised-button color="accent" (click)='onProfileClicked()' *ngIf="this.isLoggedIn()">
+    Account
+  </button>
+</mat-toolbar>
+
+<!--App container-->
+<div class="app-container">
+  <router-outlet></router-outlet>
+</div>

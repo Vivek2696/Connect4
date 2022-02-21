@@ -1,0 +1,43 @@
+<!--register wrapper-->
+<div class="register-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Register</mat-card-title>
+    </mat-card-header>
+
+    <form class="register-form">
+
+      <mat-card-content>
+        <mat-form-field class="register-full-width">
+          <input type="text" placeholder="FirstName" required [(ngModel)] = "firstNameObject" matInput name="first name">
+        </mat-form-field>
+
+        <mat-form-field class="register-full-width">
+          <input type="text" placeholder="LastName" required [(ngModel)] = "lastNameObject" matInput name="last name">
+        </mat-form-field>
+
+        <mat-form-field class="register-full-width">
+          <input type="date" placeholder="DoB" required [(ngModel)] = "dobObject" matInput name="dob">
+        </mat-form-field>
+
+        <mat-form-field class="register-full-width">
+          <input type="email" placeholder="Email" required [(ngModel)] = "emailObject" matInput name="email">
+        </mat-form-field>
+
+        <mat-form-field class="register-full-width">
+          <input type="password" placeholder="Password" required [(ngModel)] = "passwordObject" matInput name="password">
+        </mat-form-field>
+
+      </mat-card-content>
+
+      <div class="register-button">
+        <button (click) = "registerUser()" mat-stroked-button color="accent" class="btn-block">Register</button>
+      </div>
+
+      <div class="cancel-button">
+        <button mat-stroked-button class="btn-block" routerLink="/login" routerLinkActive="active">Cancel</button>
+      </div>
+
+    </form>
+  </mat-card>
+</div>

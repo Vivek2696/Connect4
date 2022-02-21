@@ -1,0 +1,56 @@
+.color-picker-wrapper{
+  height: 100%;
+}
+
+.box{
+  position:relative;
+  top:0;
+  opacity:1;
+  float:left;
+  padding:60px 50px 40px 50px;
+  width:100%;
+  background:#fff;
+  border-radius:10px;
+  max-width:330px;
+}
+
+.color-picker-wrapper mat-card-header{
+  text-align:center;
+  width:100%;
+  display:block;
+  font-weight:700;
+  margin-bottom: 16px;
+}
+
+.color-picker-wrapper mat-card-header mat-card-title{
+  font-size:30px;
+  margin:0;
+}
+
+.color-picker-wrapper .mat-card{
+  padding:40px 70px 50px;
+}
+
+#C0 {
+  width: 4.8vw;
+  height: 4.8vw;
+  border-radius: 50%;
+  background-color: crimson;
+  box-shadow:2px 2px 4.8px grey inset;
+}
+
+:hover #C0{
+  cursor: pointer;
+}
+
+#C1 {
+  width: 4.8vw;
+  height: 4.8vw;
+  border-radius: 50%;
+  background-color: yellow;
+  box-shadow:2px 2px 4.8px grey inset;
+}
+
+:hover #C1{
+  cursor: pointer;
+}

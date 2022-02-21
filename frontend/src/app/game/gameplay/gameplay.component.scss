@@ -1,0 +1,80 @@
+.game-play-container {
+  height: 100%;
+  //display: flex;
+  //flex-direction: row;
+  //flex-wrap: wrap;
+  //align-content: space-around;
+  //justify-content: space-around;
+  //background-color: silver;
+}
+
+.test-buttons {
+  position: absolute;
+  z-index: 20;
+}
+
+.title-bar {
+  width: 96%;
+  height: 10%;
+}
+
+.title-bar .mat-card {
+  width: 50%;
+}
+
+.left-panel {
+  width: 15vw;
+  height: 70vh;
+  //background-color: skyblue;
+}
+
+.game-board {
+  min-width: 350px;
+  min-height: 300px;
+  width: 44vw;
+  height: 37.71vw;
+  max-width: 1050px;
+  max-height: 900px;
+  //background-color: salmon;
+}
+
+.right-panel {
+  width: 15vw;
+  height: 70vh;
+}
+
+.bubble-player {
+  position: absolute;
+	width: 10vw;
+  height: 10vw;
+  max-width: 200px;
+  max-height: 200px;
+  font-size: 1vw;
+  line-height: 1;
+  box-sizing: border-box;
+  /* Color set from the class */
+  //background-color: crimson;
+  color: black;
+	border-radius: 50%;
+	overflow: hidden;
+  box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  transform: translatey(0px);
+  z-index: 99;
+}
+
+.bubble-opponent {
+  position: absolute;
+	width: 10vw;
+  height: 10vw;
+  max-width: 200px;
+  max-height: 200px;
+  font-size: 1vw;
+  box-sizing: border-box;
+  //background-color: darkblue;
+  color: black;
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+  transform: translatey(0px);
+  z-index: 99;
+}

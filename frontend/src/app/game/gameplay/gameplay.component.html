@@ -1,0 +1,68 @@
+<div class="game-play-container" fxLayout="row" fxLayoutAlign="space-around center">
+
+  <div class="left-panel" fxLayout="column" fxLayoutAlign="center center">
+    <div class="bubble-player"
+         [@swapturn]=playerTurn
+         [@gamefinish]=isPlayerWon
+         fxLayout="column"
+         fxLayoutAlign="center center"
+         [ngStyle]="{'background-color': playerColor}">
+      {{playerName}}
+    </div>
+  </div>
+
+  <div *ngIf="isgameSetUp">
+    <div class="game-board" *ngIf="gameMode == 'singleplayer'">
+      <app-gameboard
+        [playerColor]= 'this.playerColor'
+        [opponentColor] = 'this.opponentColor'
+        [game] = 'this.game'
+        (onPlayerTurnFinished)= 'this.onPlayerPlayed($event)'
+        (onOpponentTurnFinished) = 'this.onPlayerPlayed($event)'
+        (onGameFinished) = 'this.gamefinished($event)'>
+      </app-gameboard>
+    </div>
+    <div class="game-board" *ngIf="gameMode == 'multiplayer'">
+      <app-multiplayer-board
+        [playerColor] = 'this.playerColor'
+        [opponentColor] = 'this.opponentColor'
+        [game]='this.game'
+        (onTurnFinishedEvent)="onPlayerPlayed($event)"
+        (onGameFinished)="gamefinished($event)">
+      </app-multiplayer-board>
+    </div>
+    <div class="game-board" *ngIf="gameMode == 'replay'">
+      <app-replay-board
+        [playerColor]='this.playerColor'
+        [opponentColor]='this.opponentColor'
+        [game]='this.game'
+        [gameMoves]='this.gameMoves'
+        [firstPlayer]='this.user'
+        [secondPlayer]='this.opponent'
+        (onPlayerTurnFinished)="onPlayerPlayed($event)"
+        (onGameFinished)="gamefinished($event)">
+      </app-replay-board>
+    </div>
+    <div class="game-board" *ngIf="gameMode == 'tutorial'">
+      <app-tutorial-board
+        [playerColor]='this.playerColor'
+        [opponentColor]='this.opponentColor'
+        [game]='this.game'
+        (onPlayerTurnFinished)="onPlayerPlayed($event)"
+        (onGameFinished)="gamefinished($event)">
+      </app-tutorial-board>
+    </div>
+  </div>
+
+  <div class="right-panel" fxLayout="column" fxLayoutAlign="center center">
+    <div class="bubble-opponent"
+         [@swapturn]=opponentTurn
+         [@gamefinish]=isOpponentWon
+         fxLayout="column"
+         fxLayoutAlign="center center"
+         [ngStyle]="{'background-color': opponentColor}">
+      {{opponentName}}
+    </div>
+  </div>
+
+</div>

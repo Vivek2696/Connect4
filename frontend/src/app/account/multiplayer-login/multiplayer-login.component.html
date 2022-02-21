@@ -1,0 +1,39 @@
+<!--Login wrapper-->
+<div class="login-wrapper" fxLayout="column" fxLayoutAlign="center center">
+
+  <!--Login title-->
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Second player Log in</mat-card-title>
+    </mat-card-header>
+
+    <!--Login form-->
+    <form class="login-form" [formGroup]="loginForm" (ngSubmit)="authUser()">
+      <mat-card-content>
+        <mat-form-field class="login-full-width">
+          <input type="email" placeholder="Username" required formControlName="email" matInput>
+        </mat-form-field>
+
+        <mat-form-field class="login-full-width">
+          <input type="password" placeholder="password" required formControlName="password" matInput>
+        </mat-form-field>
+
+      </mat-card-content>
+      <div class="login-button">
+        <button type="submit" mat-stroked-button color="accent" class="btn-block" [disabled]="isLoading">Sign
+          in</button>
+        <!--<button mat-stroked-button color="accent" class="btn-block" (click) = "authUser()" [disabled]="isLoading">Log in</button>-->
+      </div>
+
+      <div class="register-content">
+        <p class="register-text">First time user?</p>
+        <a mat-button mat-raised-button class="register-link" (click)="onRegister()"
+          routerLinkActive="active">Register</a>
+      </div>
+
+      <mat-spinner *ngIf="isLoading"></mat-spinner>
+
+    </form>
+  </mat-card>
+
+</div>

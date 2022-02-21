@@ -1,0 +1,25 @@
+<div class="replay-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+  <!--Login title-->
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Game List</mat-card-title>
+    </mat-card-header>
+
+    <div class="example-table-container">
+
+      <mat-list *ngIf="!isLoading">
+        <mat-list-item class="list-item" *ngFor="let element of gameListData" (click)="onGameSelected(element)">
+          <mat-list-item role="listitem"> {{element._id}} </mat-list-item>
+          <mat-list-item role="listitem"> {{getGameMode(element.gameModeId)}} </mat-list-item>
+          <mat-divider></mat-divider>
+        </mat-list-item>
+      </mat-list>
+
+      <!-- <mat-paginator *ngIf="!isLoading" [pageSizeOptions]="[5, 10, 15]" showFirstLastButtons></mat-paginator> -->
+
+      <mat-spinner *ngIf="isLoading"></mat-spinner>
+    </div>
+
+  </mat-card>
+</div>

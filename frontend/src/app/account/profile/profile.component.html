@@ -1,0 +1,24 @@
+<!--Profile wrapper-->
+<div *ngIf="!isLoading" class="profile-wrapper" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <mat-card-header>
+      <!--Profile title (name)-->
+      <mat-card-title>{{userProfile?.firstName}} {{userProfile?.lastName}}</mat-card-title>
+    </mat-card-header>
+    <!--Profile details-->
+    <mat-grid-list cols="2" rowHeight="fit" style="height: 150px; width: auto;">
+      <mat-grid-tile>Email</mat-grid-tile>
+      <mat-grid-tile>{{userProfile?.email}}</mat-grid-tile>
+      <mat-grid-tile>Password</mat-grid-tile>
+      <mat-grid-tile>********</mat-grid-tile>
+      <mat-grid-tile>Date of Birth</mat-grid-tile>
+      <mat-grid-tile>{{userProfile?.dob | date : 'MM/dd/yyyy'}}</mat-grid-tile>
+      <mat-grid-tile>W-L Record</mat-grid-tile>
+      <mat-grid-tile>{{userProfile?.wins}} - {{userProfile?.loss}}</mat-grid-tile>
+    </mat-grid-list>
+    <!--Profile buttons-->
+    <div class="change-btn-content">
+      <a mat-button mat-raised-button class="change-btn-link" (click)="openPasswordDialog()">Change Password</a>
+    </div>
+  </mat-card>
+</div>

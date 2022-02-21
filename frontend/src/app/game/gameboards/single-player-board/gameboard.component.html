@@ -1,0 +1,89 @@
+<mat-card>
+  <div class="game-board" fxLayout="row" fxLayoutAlign="space-around center" *ngIf="boardStatus!==undefined">
+
+    <div  [ngClass]="{'column1 hover-class' : isPlayerTurn, 'column2': (isOpponentTurn || isAnimating)}"
+          fxLayout="column"
+          fxLayoutAlign="space-around center"
+          (click)="onPlayerClicked(0)">
+      <div id="C00" [@colordiv]="{value: boardStatus[0][0].name, params: {color: boardStatus[0][0].fillColor}}"></div>
+      <div id="C01" [@colordiv]="{value: boardStatus[0][1].name, params: {color: boardStatus[0][1].fillColor}}"></div>
+      <div id="C02" [@colordiv]="{value: boardStatus[0][2].name, params: {color: boardStatus[0][2].fillColor}}"></div>
+      <div id="C03" [@colordiv]="{value: boardStatus[0][3].name, params: {color: boardStatus[0][3].fillColor}}"></div>
+      <div id="C04" [@colordiv]="{value: boardStatus[0][4].name, params: {color: boardStatus[0][4].fillColor}}"></div>
+      <div id="C05" [@colordiv]="{value: boardStatus[0][5].name, params: {color: boardStatus[0][5].fillColor}}"></div>
+    </div>
+
+    <div  [ngClass]="{'column1 hover-class' : isPlayerTurn, 'column2': (isOpponentTurn || isAnimating)}"
+          fxLayout="column"
+          fxLayoutAlign="space-around center"
+          (click)="onPlayerClicked(1)">
+      <div id="C10" [@colordiv]="{value: boardStatus[1][0].name, params: {color: boardStatus[1][0].fillColor}}"></div>
+      <div id="C11" [@colordiv]="{value: boardStatus[1][1].name, params: {color: boardStatus[1][1].fillColor}}"></div>
+      <div id="C12" [@colordiv]="{value: boardStatus[1][2].name, params: {color: boardStatus[1][2].fillColor}}"></div>
+      <div id="C13" [@colordiv]="{value: boardStatus[1][3].name, params: {color: boardStatus[1][3].fillColor}}"></div>
+      <div id="C14" [@colordiv]="{value: boardStatus[1][4].name, params: {color: boardStatus[1][4].fillColor}}"></div>
+      <div id="C15" [@colordiv]="{value: boardStatus[1][5].name, params: {color: boardStatus[1][5].fillColor}}"></div>
+    </div>
+
+    <div  [ngClass]="{'column1 hover-class' : isPlayerTurn, 'column2': (isOpponentTurn || isAnimating)}"
+          fxLayout="column"
+          fxLayoutAlign="space-around center"
+          (click)="onPlayerClicked(2)">
+      <div id="C20" [@colordiv]="{value: boardStatus[2][0].name, params: {color: boardStatus[2][0].fillColor}}"></div>
+      <div id="C21" [@colordiv]="{value: boardStatus[2][1].name, params: {color: boardStatus[2][1].fillColor}}"></div>
+      <div id="C22" [@colordiv]="{value: boardStatus[2][2].name, params: {color: boardStatus[2][2].fillColor}}"></div>
+      <div id="C23" [@colordiv]="{value: boardStatus[2][3].name, params: {color: boardStatus[2][3].fillColor}}"></div>
+      <div id="C24" [@colordiv]="{value: boardStatus[2][4].name, params: {color: boardStatus[2][4].fillColor}}"></div>
+      <div id="C25" [@colordiv]="{value: boardStatus[2][5].name, params: {color: boardStatus[2][5].fillColor}}"></div>
+    </div>
+
+    <div  [ngClass]="{'column1 hover-class' : isPlayerTurn, 'column2': (isOpponentTurn || isAnimating)}"
+          fxLayout="column"
+          fxLayoutAlign="space-around center"
+          (click)="onPlayerClicked(3)">
+      <div id="C30" [@colordiv]="{value: boardStatus[3][0].name, params: {color: boardStatus[3][0].fillColor}}"></div>
+      <div id="C31" [@colordiv]="{value: boardStatus[3][1].name, params: {color: boardStatus[3][1].fillColor}}"></div>
+      <div id="C32" [@colordiv]="{value: boardStatus[3][2].name, params: {color: boardStatus[3][2].fillColor}}"></div>
+      <div id="C33" [@colordiv]="{value: boardStatus[3][3].name, params: {color: boardStatus[3][3].fillColor}}"></div>
+      <div id="C34" [@colordiv]="{value: boardStatus[3][4].name, params: {color: boardStatus[3][4].fillColor}}"></div>
+      <div id="C35" [@colordiv]="{value: boardStatus[3][5].name, params: {color: boardStatus[3][5].fillColor}}"></div>
+    </div>
+
+    <div  [ngClass]="{'column1 hover-class' : isPlayerTurn, 'column2': (isOpponentTurn || isAnimating)}"
+          fxLayout="column"
+          fxLayoutAlign="space-around center"
+          (click)="onPlayerClicked(4)">
+      <div id="C40" [@colordiv]="{value: boardStatus[4][0].name, params: {color: boardStatus[4][0].fillColor}}"></div>
+      <div id="C41" [@colordiv]="{value: boardStatus[4][1].name, params: {color: boardStatus[4][1].fillColor}}"></div>
+      <div id="C42" [@colordiv]="{value: boardStatus[4][2].name, params: {color: boardStatus[4][2].fillColor}}"></div>
+      <div id="C43" [@colordiv]="{value: boardStatus[4][3].name, params: {color: boardStatus[4][3].fillColor}}"></div>
+      <div id="C44" [@colordiv]="{value: boardStatus[4][4].name, params: {color: boardStatus[4][4].fillColor}}"></div>
+      <div id="C45" [@colordiv]="{value: boardStatus[4][5].name, params: {color: boardStatus[4][5].fillColor}}"></div>
+    </div>
+
+    <div  [ngClass]="{'column1 hover-class' : isPlayerTurn, 'column2': (isOpponentTurn || isAnimating)}"
+          fxLayout="column"
+          fxLayoutAlign="space-around center"
+          (click)="onPlayerClicked(5)">
+      <div id="C50" [@colordiv]="{value: boardStatus[5][0].name, params: {color: boardStatus[5][0].fillColor}}"></div>
+      <div id="C51" [@colordiv]="{value: boardStatus[5][1].name, params: {color: boardStatus[5][1].fillColor}}"></div>
+      <div id="C52" [@colordiv]="{value: boardStatus[5][2].name, params: {color: boardStatus[5][2].fillColor}}"></div>
+      <div id="C53" [@colordiv]="{value: boardStatus[5][3].name, params: {color: boardStatus[5][3].fillColor}}"></div>
+      <div id="C54" [@colordiv]="{value: boardStatus[5][4].name, params: {color: boardStatus[5][4].fillColor}}"></div>
+      <div id="C55" [@colordiv]="{value: boardStatus[5][5].name, params: {color: boardStatus[5][5].fillColor}}"></div>
+    </div>
+
+    <div  [ngClass]="{'column1 hover-class' : isPlayerTurn, 'column2': (isOpponentTurn || isAnimating)}"
+          fxLayout="column"
+          fxLayoutAlign="space-around center"
+          (click)="onPlayerClicked(6)">
+      <div id="C60" [@colordiv]="{value: boardStatus[6][0].name, params: {color: boardStatus[6][0].fillColor}}"></div>
+      <div id="C61" [@colordiv]="{value: boardStatus[6][1].name, params: {color: boardStatus[6][1].fillColor}}"></div>
+      <div id="C62" [@colordiv]="{value: boardStatus[6][2].name, params: {color: boardStatus[6][2].fillColor}}"></div>
+      <div id="C63" [@colordiv]="{value: boardStatus[6][3].name, params: {color: boardStatus[6][3].fillColor}}"></div>
+      <div id="C64" [@colordiv]="{value: boardStatus[6][4].name, params: {color: boardStatus[6][4].fillColor}}"></div>
+      <div id="C65" [@colordiv]="{value: boardStatus[6][5].name, params: {color: boardStatus[6][5].fillColor}}"></div>
+    </div>
+
+  </div>
+</mat-card>

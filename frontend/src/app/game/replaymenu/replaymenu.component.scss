@@ -1,0 +1,79 @@
+/* Structure */
+.example-table-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 400px;
+  max-width: 700px;
+  min-height: 400px;
+  max-height: 700px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+
+mat-list{
+  width: 100%;
+}
+
+.mat-column-gameMode {
+  max-width: 64px;
+}
+
+.mat-column-gameId {
+  max-width: 124px;
+}
+
+.replay-wrapper{
+  height:100%;
+}
+
+.box{
+  position:relative;
+  top:0;
+  opacity:1;
+  float:left;
+  padding:60px 50px 40px 50px;
+  width:100%;
+  background:#fff;
+  border-radius:10px;
+  max-width:700px;
+}
+
+
+.list-item:hover {
+  transform: scale(1.03);
+  box-shadow:10px 10px 25px grey;
+  cursor: pointer;
+}
+
+// h1
+// {
+//     text-align: center;
+//     color: #4CAF50;
+// }
+// #users {
+//     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+//     border-collapse: collapse;
+//     width: 100%;
+//   }
+
+//   #users td, #users th {
+//     border: 1px solid #ddd;
+//     padding: 8px;
+//   }
+
+//   #users tr:nth-child(even){background-color: #f2f2f2;}
+
+//   #users tr:hover {background-color: #ddd;}
+
+//   #users th {
+//     padding-top: 12px;
+//     padding-bottom: 12px;
+//     text-align: left;
+//     background-color: #4CAF50;
+//     color: white;
+//   }
