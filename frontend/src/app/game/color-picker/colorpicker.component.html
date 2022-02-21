@@ -1,0 +1,22 @@
+<!--color-picker wrapper-->
+<div class="color-picker-wrapper" fxLayout="column" fxLayoutAlign="center center">
+
+  <!--color-picker title-->
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title *ngIf="gameMode == 'singleplayer'">Pick a color</mat-card-title>
+      <mat-card-title *ngIf="gameMode == 'multiplayer'">{{playerName}} pick a color</mat-card-title>
+    </mat-card-header>
+
+    <!--color-picker-->
+    <mat-card-content>
+      <div *ngIf="gameMode != undefined">
+        <div fxLayout="row" fxLayoutAlign="space-around">
+          <div id="C0" (click)="onColorSelected(0)"></div>
+          <div id="C1" (click)="onColorSelected(1)"></div>
+        </div>
+      </div>
+    </mat-card-content>
+  </mat-card>
+
+</div>

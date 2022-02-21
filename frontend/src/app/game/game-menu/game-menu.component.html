@@ -1,0 +1,29 @@
+<div class="menu-wrapper" fxLayout="row" fxLayoutAlign="center center">
+
+  <mat-card class="box">
+    <mat-card-header>
+      <mat-card-title>Welcome {{userName}},</mat-card-title>
+      <mat-card-title>to Connect4!</mat-card-title>
+    </mat-card-header>
+
+    <form class="menu-form">
+
+      <mat-card-content>
+        <mat-form-field appearance="fill" class="menu-full-width">
+          <mat-label>Select Game Mode</mat-label>
+          <mat-select required [(value)]="selectedOption">
+            <mat-option *ngFor="let option of gameOptions" [value]="option.value">
+              {{option.viewValue}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </mat-card-content>
+
+      <div class="continue-button">
+        <button mat-stroked-button color="accent" class="btn-block" (click)="onContinue(selectedOption)">Continue</button>
+      </div>
+
+    </form>
+
+  </mat-card>
+</div>

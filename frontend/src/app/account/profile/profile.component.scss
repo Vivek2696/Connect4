@@ -1,0 +1,73 @@
+.profile-wrapper {
+  height: 100%;
+}
+
+.box {
+  position: relative;
+  top: 0;
+  opacity: 1;
+  float: left;
+  padding: 60px 50px 40px 50px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  max-width: 330px;
+}
+
+.profile-wrapper mat-card {
+  padding: 40px;
+}
+
+.profile-wrapper mat-card-header {
+  text-align: center;
+  width: 100%;
+  display: block;
+  font-weight: 700;
+}
+
+.profile-wrapper mat-card-title {
+  text-align: center;
+  font-size: 25px;
+  margin: 10px;
+  padding: 5px;
+}
+
+.profile-wrapper .profile-photo {
+  border: 1px solid #ccc;
+  background-size: cover;
+  height: 125px;
+  width: 125px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  object-fit: cover;
+  margin: 5px;
+}
+
+.profile-wrapper mat-grid-list {
+  margin: 10px;
+}
+.profile-wrapper .mat-raised-button {
+  border: 1px solid #959595;
+  line-height: 30px;
+  background: #e9e8e8;
+}
+
+.profile-wrapper .change-btn-content {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.profile-wrapper .change-btn-text {
+  width: 30%;
+  margin-top: 30px;
+  margin-right: 5px;
+}
+
+.profile-wrapper .change-btn-link {
+  width: auto;
+  margin: 5px;
+}
