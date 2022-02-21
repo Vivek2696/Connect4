@@ -21,7 +21,7 @@ Full Stack web application game
   * open up Service manager in window
     * Find an entry called: MongoDB Server
     * right click and start it
-    * ![services](https://user-images.githubusercontent.com/40550830/155009875-a6ce385c-f4ad-4c88-9fba-1ffc2b8ee31c.PNG)
+    * ![services](https://github.com/Vivek2696/Connect4/blob/features/connect4game_vp/Screeenshots/services.PNG?raw=true)
 
 * Open a command line
 * change directory into the connect4 folder
@@ -29,7 +29,7 @@ Full Stack web application game
 * run “npm install” - this will install all the dependencies for the backend project
 * start the server by running “node index.js”
   * you will see something like this
-  * ![nodejs](https://user-images.githubusercontent.com/40550830/155011140-efcda59f-1aad-4500-90c2-f130c0f2124f.PNG)
+  * ![nodejs](https://github.com/Vivek2696/Connect4/blob/features/connect4game_vp/Screeenshots/nodejs.PNG?raw=true)
   * stopping the server - hit ctrl + c
 
 ## Frontend
@@ -38,11 +38,11 @@ Full Stack web application game
 * change directory into the frontend folder, so the directory would be …/connect4/frontend
 * run “npm install”
 * Then to start the frontend angular server, run : “ng serve”. After compilation you should see like this:
-  * ![ngserve](https://user-images.githubusercontent.com/40550830/155011224-26340aac-3378-45bd-8654-a0d7b47d6156.PNG)
+  * ![ngserve](https://github.com/Vivek2696/Connect4/blob/features/connect4game_vp/Screeenshots/ngserve.PNG?raw=true)
 * Once the angular server is compiled, it will automatically open the browser to “http://localhost:4200/login” if there are issues just type the preceding URL into the browser
 
 ## Demo
-
+![Demo](https://github.com/Vivek2696/Connect4/blob/features/connect4game_vp/Screeenshots/Connect4-Google-Chrome-2022-02-2.gif?raw=true)
 
 
 
