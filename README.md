@@ -1,5 +1,5 @@
 # Connect4
-Full Stack web application game
+Full Stack web application game (CECS Undergrad - Software Engineering Team Project)
 
 ![Main GamePlay](https://github.com/Vivek2696/Connect4/blob/features/connect4game_vp/Screeenshots/gameplay1.PNG?raw=true)
 
@@ -43,6 +43,10 @@ Full Stack web application game
 
 ## Demo
 ![Demo](https://github.com/Vivek2696/Connect4/blob/features/connect4game_vp/Screeenshots/Connect4-Google-Chrome-2022-02-2.gif?raw=true)
+
+## Documents
+
+[SRS Document](https://github.com/Vivek2696/Connect4/files/8113693/SRS.Document.docx.pdf)
 
 
 
